@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -r \"API_KEY\\\\|api_key\\\\|YOUR_API\\\\|your-api\\\\|placeholder\" --include=\"*.py\" --include=\"*.md\" --include=\"*.json\" -l 2>/dev/null | head -30)",
+      "Bash(python3 -m py_compile NanoBanana-PPT-Skills/*.py 2>&1 || echo \"Python syntax errors found\")",
+      "Bash(python3 -m py_compile marketing-skill/*/*/*.py 2>&1 | head -20)",
+      "Bash(cd \"D:\\\\\\\\Skills\\\\\\\\.claude\\\\\\\\skills\" && python3 -m py_compile mcp-builder/scripts/connections.py 2>&1 || echo \"SYNTAX ERROR in connections.py\")",
+      "Bash(cd \"D:\\\\\\\\Skills\\\\\\\\.claude\\\\\\\\skills\" && find . -name \"*.py\" -exec python3 -m py_compile {} \\\\; 2>&1 | head -30)",
+      "Bash(python3 -m py_compile NanoBanana-PPT-Skills/kling_api.py 2>&1 || echo \"SYNTAX ERROR\")",
+      "Bash(python3 -m py_compile NanoBanana-PPT-Skills/generate_ppt.py 2>&1 || echo \"SYNTAX ERROR\")",
+      "Bash(python3 -m py_compile skill-creator/scripts/init_skill.py 2>&1 || echo \"SYNTAX ERROR\")",
+      "Bash(python3 -m py_compile skill-creator/scripts/package_skill.py 2>&1 || echo \"SYNTAX ERROR\")",
+      "Bash(find . -name \"*.py\" -exec python3 -m py_compile {} \\\\; 2>&1 | head -30)",
+      "Bash(find \"D:\\\\\\\\Skills\\\\\\\\.claude\\\\\\\\skills\\\\\\\\c-level-advisor\" -name \"*.py\" -exec head -20 {} \\\\; 2>/dev/null | grep -E \"^import|^from\" | sort | uniq)",
+      "Bash(find \"D:\\\\\\\\Skills\\\\\\\\.claude\\\\\\\\skills\\\\\\\\marketing-skill\" -name \"*.py\" -exec head -20 {} \\\\; 2>/dev/null | grep -E \"^import|^from\" | sort | uniq)",
+      "Bash(grep -r \"^import\\\\|^from\" D:Skills.claudeskillsc-level-advisorscripts --include=*.py)",
+      "Bash(grep -r \"^import\\\\|^from\" D:Skills.claudeskillsmarketing-skill --include=*.py)",
+      "Bash(cd \"D:\\\\\\\\Skills\\\\\\\\.claude\\\\\\\\skills\" && echo \"=== CHECKING PYTHON SYNTAX ===\" && find . -name \"*.py\" -exec python3 -m py_compile {} \\\\; 2>&1 | grep -v \"^$\" | head -30)"
+    ]
+  }
+}

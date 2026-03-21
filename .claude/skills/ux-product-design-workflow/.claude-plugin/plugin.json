@@ -1,0 +1,125 @@
+{
+  "name": "ux-product-design-workflow",
+  "description": "Comprehensive 7-phase UX & Product Design workflow. Covers Discovery, Define, IA, Prototyping, Validation, Handoff, and Optimization with 6 autonomous agents, 50+ complementary skills, 24 templates, 7 DoD checklists, and MCP integrations for accessibility auditing, browser automation, design system lookup, and prototype review.",
+  "version": "1.1.1",
+  "author": {
+    "name": "Fady"
+  },
+  "keywords": ["ux", "product-design", "user-research", "design-workflow", "accessibility", "handoff", "prototyping"],
+  "mcpServers": {
+    "accesslint": {
+      "description": "WCAG 2.1 AA accessibility auditing for URLs, files, and HTML",
+      "required": false,
+      "tools": ["audit_url", "audit_file", "audit_html", "diff_html", "list_rules"]
+    },
+    "playwright": {
+      "description": "Browser automation for prototype testing, interaction flows, and visual regression",
+      "required": false,
+      "tools": ["browser_navigate", "browser_snapshot", "browser_click", "browser_fill_form", "browser_take_screenshot", "browser_evaluate", "browser_console_messages", "browser_network_requests", "browser_wait_for", "browser_hover", "browser_type", "browser_press_key"]
+    },
+    "chrome-devtools": {
+      "description": "Performance auditing, Lighthouse, CWV measurement, network analysis",
+      "required": false,
+      "tools": ["lighthouse_audit", "take_screenshot", "take_snapshot", "navigate_page", "performance_start_trace", "performance_stop_trace", "list_console_messages", "list_network_requests"]
+    },
+    "Claude_Preview": {
+      "description": "Live preview of HTML/React prototypes with interactive testing",
+      "required": false,
+      "tools": ["preview_start", "preview_stop", "preview_list", "preview_screenshot", "preview_click", "preview_fill", "preview_snapshot", "preview_logs", "preview_console_logs", "preview_network", "preview_eval", "preview_inspect", "preview_resize"]
+    },
+    "shadcn-ui": {
+      "description": "shadcn/ui component registry lookup and design system alignment",
+      "required": false,
+      "tools": ["list_items_in_registries", "search_items_in_registries", "view_items_in_registries", "get_item_examples_from_registries", "get_add_command_for_items", "get_project_registries", "get_audit_checklist"]
+    },
+    "shadcn-community": {
+      "description": "Community component discovery, themes, and page-level patterns",
+      "required": false,
+      "tools": ["list_components", "get_component", "get_component_demo", "get_component_metadata", "list_blocks", "list_themes", "apply_theme", "get_theme", "get_directory_structure"]
+    },
+    "storybook-figma": {
+      "description": "Design-to-code bridging via Storybook stories and Figma integration",
+      "required": false,
+      "tools": ["call_storybook_tool", "call_figma_tool", "get_component_context", "list_storybook_tools", "list_figma_tools", "scope_design_components"]
+    },
+    "context7": {
+      "description": "Up-to-date library documentation lookup for any framework",
+      "required": false,
+      "tools": ["resolve-library-id", "query-docs"]
+    }
+  },
+  "agents": [
+    {
+      "name": "ux-accessibility-auditor",
+      "description": "WCAG 2.1 AA accessibility auditor. Audits URLs, files, and HTML using AccessLint MCP. Trigger after prototype review or before handoff.",
+      "path": "agents/ux-accessibility-auditor.md"
+    },
+    {
+      "name": "ux-artifact-generator",
+      "description": "Transforms raw research data into structured UX artifacts: personas, journey maps, empathy maps, problem statements, HMW, JTBD, opportunity solution trees.",
+      "path": "agents/ux-artifact-generator.md"
+    },
+    {
+      "name": "ux-handoff-preparer",
+      "description": "Generates the full design-to-engineering handoff package: acceptance criteria (Gherkin), edge case catalogs, state specs, accessibility specs, shadcn component cross-references.",
+      "path": "agents/ux-handoff-preparer.md"
+    },
+    {
+      "name": "ux-phase-navigator",
+      "description": "Detects current UX phase, checks Definition of Done criteria, gates phase transitions, and maintains phase-status.json. Invoke when starting or checking progress.",
+      "path": "agents/ux-phase-navigator.md"
+    },
+    {
+      "name": "ux-prototype-reviewer",
+      "description": "Reviews live prototypes and dev servers. Applies Nielsen's 10 heuristics, validates interaction states, captures screenshots. Uses Claude Preview, Playwright, and Chrome DevTools MCPs.",
+      "path": "agents/ux-prototype-reviewer.md"
+    },
+    {
+      "name": "ux-researcher",
+      "description": "Autonomous UX researcher for competitive analysis, UX teardowns, and accessibility scanning. Browses live URLs and documents findings using browser MCPs.",
+      "path": "agents/ux-researcher.md"
+    }
+  ],
+  "skills": [
+    {
+      "name": "ux-product-design-workflow",
+      "description": "Master orchestrator skill for the full 7-phase UX workflow. Routes to phase-specific sub-skills based on context.",
+      "path": "SKILL.md"
+    },
+    {
+      "name": "ux-discover",
+      "description": "Phase 1: Discovery & Research — stakeholder alignment, interview guides, competitive analysis, JTBD mapping, empathy mapping.",
+      "path": "skills/ux-discover/SKILL.md"
+    },
+    {
+      "name": "ux-define",
+      "description": "Phase 2: Define & Problem Framing — affinity mapping, persona creation, journey mapping, problem statements, HMW statements, Opportunity Solution Trees.",
+      "path": "skills/ux-define/SKILL.md"
+    },
+    {
+      "name": "ux-ia",
+      "description": "Phase 3: IA & Interaction Design — information architecture, sitemaps, user flows, state inventories, wireframe descriptions.",
+      "path": "skills/ux-ia/SKILL.md"
+    },
+    {
+      "name": "ux-prototype",
+      "description": "Phase 4: Prototyping & Laws of UX — high-fidelity prototypes, design system integration, Laws of UX application, RTL/MENA patterns.",
+      "path": "skills/ux-prototype/SKILL.md"
+    },
+    {
+      "name": "ux-validate",
+      "description": "Phase 5: Validation & Usability Testing — test planning, participant recruitment, think-aloud protocol, heuristic evaluation, WCAG audit, findings synthesis.",
+      "path": "skills/ux-validate/SKILL.md"
+    },
+    {
+      "name": "ux-handoff",
+      "description": "Phase 6: Design-to-Engineering Handoff — annotated specs, state documentation, edge case catalogs, accessibility requirements, acceptance criteria.",
+      "path": "skills/ux-handoff/SKILL.md"
+    },
+    {
+      "name": "ux-optimize",
+      "description": "Phase 7: Post-Launch Optimization — HEART framework, AARRR metrics, Goals-Signals-Metrics, A/B experiment design, Product Kata cycles, continuous discovery.",
+      "path": "skills/ux-optimize/SKILL.md"
+    }
+  ]
+}

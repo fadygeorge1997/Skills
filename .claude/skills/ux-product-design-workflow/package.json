@@ -1,0 +1,20 @@
+{
+  "name": "ux-product-design-workflow",
+  "version": "1.0.0",
+  "description": "A comprehensive 7-phase UX & Product Design workflow plugin for Claude Code. Provides 6 autonomous agents, 8 skills, 24 templates, 7 Definition of Done checklists, and MCP integrations for accessibility auditing, browser automation, design system lookup, and prototype review.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:ui": "npx playwright test --ui",
+    "chromatic": "npx chromatic --playwright --project-token=chpt_56280b056e29b6b"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@chromatic-com/playwright": "^0.12.8",
+    "@playwright/test": "^1.58.2",
+    "chromatic": "^15.3.0"
+  }
+}

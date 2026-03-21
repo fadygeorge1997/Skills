@@ -1,0 +1,4 @@
+# Webapp Testing - Python Dependencies
+# For Playwright browser automation
+
+playwright>=1.40.0
