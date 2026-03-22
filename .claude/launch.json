@@ -1,0 +1,33 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "Sandbox UI (Vite Dev)",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["vite"],
+      "port": 5173,
+      "cwd": "ux-product-design-workflow/sandbox-ui"
+    },
+    {
+      "name": "Sandbox UI Preview",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["vite", "preview"],
+      "port": 4173,
+      "cwd": "ux-product-design-workflow/sandbox-ui"
+    },
+    {
+      "name": "Storybook",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "storybook"],
+      "port": 6006,
+      "cwd": "ux-product-design-workflow/sandbox-ui"
+    },
+    {
+      "name": "Playwright Test UI",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["playwright", "test", "--ui"],
+      "port": 8077,
+      "cwd": ".claude/skills/ux-product-design-workflow"
+    }
+  ]
+}
