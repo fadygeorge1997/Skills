@@ -298,3 +298,14 @@ When integrating with Egyptian mobile wallets (Vodafone Cash, Orange Money, Etis
 - Failed wallet transactions should suggest alternatives (try another wallet, use InstaPay)
 - Receipt format should be consistent regardless of payment method
 - USSD fallback for basic phones is still relevant in rural areas
+
+---
+
+### Cross-References — RTL Applies Across All Phases
+- For RTL-aware research recruitment → `discovery-synthesis.md`
+- For Arabic competitive landscape → `competitive-analysis.md`
+- For RTL navigation patterns → `ideation-prototyping.md`
+- For RTL-specific UX laws (touch zones, reading patterns) → `laws-of-ux.md`
+- For RTL usability testing considerations → `usability-testing.md`
+- For RTL responsive breakpoint specs → `design-handoff.md`
+- For MENA market metrics and benchmarks → `metrics-optimization.md`

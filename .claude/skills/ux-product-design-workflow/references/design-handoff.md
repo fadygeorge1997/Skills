@@ -432,3 +432,13 @@ When designing responsive + RTL:
 | **Design drift** | Implementation slowly diverges from spec | Regular design QA sessions during sprints |
 | **Assumption cascade** | Dev assumes behavior for edge cases | Edge case catalog provided upfront; unknowns flagged for discussion |
 | **Token drift** | Figma tokens diverge from code tokens | Single source of truth; automated token sync |
+
+---
+
+### Cross-References
+- For design token architecture → `ideation-prototyping.md`
+- For accessibility requirements in handoff → `usability-testing.md` (WCAG POUR)
+- For RTL responsive specifications → `arabic-rtl-mena.md`
+- For acceptance criteria metric alignment → `metrics-optimization.md`
+- For AI feature handoff patterns → `agentic-ai-design.md`
+- For component design system patterns → `laws-of-ux.md` (Jakob's Law)

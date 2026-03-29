@@ -128,7 +128,7 @@ Extract deeper cognitive insights through specific probes:
 
 ### Typical Issue Distribution
 
-- 3-5 evaluators catch ~75% of usability issues
+- 3-5 evaluators typically uncover 60-75% of usability issues (Nielsen, 1994). Adding more evaluators yields diminishing returns.
 - A single evaluator catches ~35%
 - Expect 30-50 issues from a thorough evaluation of a complex product
 - Typically: 5% catastrophic, 25% major, 40% minor, 30% cosmetic
@@ -601,3 +601,13 @@ Observer: [Name]
 Types: Confusion, Pain point, Delight, Suggestion, Error, Recovery, Quote
 Severity: Critical, Major, Minor, Cosmetic, Positive
 ```
+
+---
+
+### Cross-References
+- For heuristic definitions (Nielsen's 10) → `laws-of-ux.md`
+- For accessibility patterns in prototype design → `ideation-prototyping.md`
+- For RTL/Arabic testing recruitment → `arabic-rtl-mena.md`
+- For benchmark metric targets → `metrics-optimization.md`
+- For AI feature testing patterns → `agentic-ai-design.md`
+- For handoff of test findings → `design-handoff.md`

@@ -15,7 +15,7 @@
 
 ## Jobs-To-Be-Done Framework
 
-People don't buy products; they "hire" them to make functional, emotional, and social progress. Jobs remain stable over time even as technologies change, making innovation more predictable.
+People don't buy products; they "hire" them to make functional, emotional, and social progress (Christensen, Ulwick). Jobs remain stable over time even as technologies change, making innovation more predictable.
 
 ### JTBD Job Map
 
@@ -428,3 +428,13 @@ A stakeholder alignment brief (1-2 pages) documenting:
 - Assumption inventory (to test during research)
 - Decision-making process and key approvers
 - Timeline and phase expectations
+
+---
+
+### Cross-References
+- For competitive analysis methodology → `competitive-analysis.md`
+- For journey map state design patterns → `ideation-prototyping.md`
+- For accessibility in research recruitment → `usability-testing.md`
+- For RTL/Arabic user research considerations → `arabic-rtl-mena.md`
+- For AI-powered synthesis workflows → `agentic-ai-design.md`
+- For metrics that validate research quality → `metrics-optimization.md`

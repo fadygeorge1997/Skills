@@ -60,7 +60,7 @@ From Phase 2 (Define):
 
 ### 4. State Inventory
 - [ ] Identify all interactive elements
-- [ ] Document all states per element (7+ states)
+- [ ] Document all 8 content states per screen (default, empty, loading, partial, error, success, offline, permission)
 - [ ] Define state transition triggers
 - [ ] Plan loading and error handling
 
@@ -81,6 +81,10 @@ From Phase 2 (Define):
 | User Flows | Annotated diagrams | `templates/user-flow-template.md` |
 | State Inventory | Element-state matrix | `templates/state-inventory-template.md` |
 | Wireframes | Annotated descriptions | Generated during phase |
+
+### Quality Criteria
+
+An IA is validated when: (1) tree testing shows >80% findability on primary tasks, (2) card sorting agreement exceeds 60% on top-level categories, (3) all 8 content states are inventoried for every screen.
 
 ---
 
@@ -181,9 +185,9 @@ For each existing solution or assumption:
 
 ---
 
-## State Inventory (7+ States)
+## State Inventory (8 Content States)
 
-Every interactive element must account for these states:
+Every screen and content area must account for these 8 content states:
 
 | State | Description | Design Question |
 |-------|-------------|-----------------|
@@ -252,7 +256,15 @@ Every interactive element must account for these states:
 
 ### Missing States
 - **Problem:** Only designing happy path
-- **Solution:** Every interactive element needs all 7+ states
+- **Solution:** Every screen needs all 8 content states inventoried
+
+### Skipping State Design
+- **Problem:** Only designing the happy path default state. Empty, error, and offline states are where trust is built or broken.
+- **Solution:** Inventory all 8 content states (default, empty, loading, partial, error, success, offline, permission) for every screen before moving to prototyping.
+
+### Ignoring Feasibility
+- **Problem:** Designing elaborate flows without engineering input on what's buildable.
+- **Solution:** Include engineering in flow reviews. Mark flows with feasibility confidence (high/medium/low) and schedule technical spikes for uncertain areas.
 
 ---
 
@@ -265,7 +277,7 @@ Phase 3 is complete when:
 - [ ] Card sorting conducted (or planned for validation)
 - [ ] Navigation validated with Hick's Law (≤7 items per level)
 - [ ] User flows for core scenarios with error paths and edge cases
-- [ ] State inventories for all primary screens (all 7+ states)
+- [ ] State inventories for all primary screens (all 8 content states)
 - [ ] Wireframe descriptions with behavioral annotations
 - [ ] All flows reference personas by name
 - [ ] Tree testing validation approach defined (if IA is critical)
@@ -274,15 +286,27 @@ Phase 3 is complete when:
 
 ## Cross-Phase References
 
-**Input from Phase 2:**
-- Personas → User flow persona context
-- Journey map pain points → Flow pain point resolution
+**Required input from Phase 2 (Define):**
+- User personas with behaviors and goals → User flow persona context
+- Journey maps with pain points and opportunities → Flow pain point resolution
 - Problem statements → Sitemap navigation justification
+- HMW statements → Ideation prompts
+- Opportunity Solution Tree → Solution concept grounding
+- Design brief with constraints
+
+**Artifacts this phase produces for the next phase (Phase 4):**
+- Sitemap with navigation structure
+- User flows with decision points, error paths, and edge cases
+- State inventories (all 8 content states per screen)
+- Wireframe descriptions with behavioral annotations
+- Card sorting validation results (if conducted)
 
 **Output feeds into:**
 - Phase 4 (Prototype): High-fidelity designs based on wireframes
 - Phase 5 (Validate): Test scenarios from user flows
 - Phase 6 (Handoff): State documentation for engineering
+
+**Loop-back triggers:** Return to Phase 2 (Define) when card sorting reveals user mental models that contradict persona assumptions, when ideation uncovers new user needs not captured in problem statements, or when engineering feasibility review invalidates core flow assumptions.
 
 ---
 

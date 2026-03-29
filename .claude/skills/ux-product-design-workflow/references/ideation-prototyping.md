@@ -513,3 +513,12 @@ Before moving from Ideation into Interaction Design:
 - [ ] No concept selected purely based on HiPPO — evidence-based decision documented
 - [ ] Ideas explicitly killed are documented with rationale (institutional memory)
 - [ ] Selected concept(s) have clear next-step: prototype fidelity level and test plan
+
+---
+
+### Cross-References
+- For cognitive load in navigation design → `laws-of-ux.md` (Miller's Law, Hick's Law)
+- For accessibility-first component design → `usability-testing.md` (WCAG POUR)
+- For RTL navigation patterns → `arabic-rtl-mena.md`
+- For RICE scoring metric alignment → `metrics-optimization.md`
+- For AI-assisted ideation → `agentic-ai-design.md`

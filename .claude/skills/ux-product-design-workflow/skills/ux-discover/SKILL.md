@@ -85,6 +85,10 @@ Before starting this phase, gather or request:
 | Four-Risk Gate | Assessment document | `templates/four-risk-gate-template.md` |
 | Design Brief | 1-2 page summary | `templates/design-brief-template.md` |
 
+### Quality Criteria
+
+A research synthesis is complete when: (1) every finding cites at least one evidence source, (2) themes are tagged with frequency count, (3) assumptions are explicitly separated from evidence.
+
 ---
 
 ## JTBD Interview Questions
@@ -172,6 +176,14 @@ For each initiative, assess all four risks:
 - **Problem:** "I already know what to build"
 - **Solution:** Document assumptions explicitly. Test them. Most will be wrong.
 
+### Solo Research
+- **Problem:** Conducting research without stakeholder involvement. Insights not shared don't drive decisions.
+- **Solution:** Include at least one stakeholder in synthesis sessions. Share findings early and often.
+
+### Data Hoarding
+- **Problem:** Collecting data without documenting in retrievable format.
+- **Solution:** Every interview, observation, and data point goes into a structured artifact (empathy map, JTBD statement, or opportunity backlog) within 48 hours of collection.
+
 ---
 
 ## Definition of Done
@@ -193,10 +205,23 @@ Phase 1 is complete when:
 
 ## Cross-Phase References
 
+**Required input from previous phase:** None (Phase 1 is the entry point). However, Phase 7 (Optimize) feeds new research questions and behavior data back into Discovery when looping.
+
 **Output feeds into:**
 - Phase 2 (Define): Personas reference JTBD statements and empathy maps
 - Phase 2 (Define): Problem statements reference opportunity backlog
 - Phase 3 (IA): User flows reference JTBD job maps
+
+**Artifacts this phase produces for the next phase (Phase 2):**
+- Research synthesis with themed insights
+- Empathy maps per segment
+- JTBD statements and job maps
+- Competitive analysis findings
+- Opportunity backlog
+- Four-Risk Gate assessment
+- Design brief with constraints
+
+**Loop-back triggers:** Return to Discovery when Phase 7 metrics stall, when new user segments emerge, when market conditions shift significantly, or when assumptions tagged in later phases prove invalid.
 
 **Reference artifacts in outputs:**
 - Persona → "Based on JTBD statement: [reference]"

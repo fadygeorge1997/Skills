@@ -2,7 +2,7 @@
 
 ## Overview
 
-A comprehensive 7-phase UX & Product Design workflow plugin for Claude Code. Covers Discovery, Define, IA & Interaction Design, Prototyping, Validation, Handoff, and Post-Launch Optimization.
+An autonomous 7-phase UX & Product Design workflow plugin for Claude Code. Self-loads context, routes to 56+ complementary skills, and self-audits to Impeccable Standard. Covers Discovery, Define, IA & Interaction Design, Prototyping, Validation, Handoff, and Post-Launch Optimization with non-linear iteration support.
 
 ## Structure
 
@@ -24,8 +24,13 @@ agents/                     # 6 autonomous agents
   ux-prototype-reviewer.md
   ux-researcher.md
 templates/                  # 24 artifact templates
-checklists/                 # 7 Definition of Done checklists
-references/                 # 10 deep-dive reference docs
+checklists/                 # 7 Definition of Done checklists (with loop-back triggers)
+references/                 # 10 deep-dive reference docs (cross-referenced)
+rules/                      # Orchestration layer
+  context-engineering.md    # Output format rules, evidence tagging
+  agent-coordination.md     # Agent priority, data flow, conflict resolution
+  iteration-workflows.md    # Loop-back triggers, forward-only conditions
+  skill-routing.md          # Context Bootstrap, Skill Routing Table, Self-Audit
 integrations/               # MCP tools guide + skill chaining guide
 .claude-plugin/plugin.json  # Plugin manifest
 ```
@@ -51,9 +56,19 @@ integrations/               # MCP tools guide + skill chaining guide
 6. Design-to-Engineering Handoff
 7. Post-Launch Optimization
 
+## Skill Access
+
+All 6 agents have the `Skill` tool and can invoke **any installed skill** (1000+ available):
+- `Skill(skill: "find-skills")` — Search skills by keyword when the routing table doesn't cover a need
+- `Skill(skill: "speckit-full")` — Full spec-kit workflow for reasoning and planning
+- `Skill(skill: "accessibility")`, `Skill(skill: "cro-methodology")`, etc. — Direct invocation by name
+- Agents autonomously chain skills when a complementary skill improves deliverable quality
+
 ## Conventions
 
 - All artifacts use evidence tagging: `[EVIDENCE: source]`, `[ASSUMPTION: reason]`, `[CONTRADICTION: source1 vs source2]`
 - Empathy maps use 6 quadrants: Says, Thinks, Does, Feels, Sees, Hears
-- State inventories cover 7+ states: Default, Empty, Loading, Partial, Error, Success, Offline, Permission
+- 8 content states per screen: Default, Empty, Loading, Partial, Error, Success, Offline, Permission
+- 5 interaction states per element: Default, Hover, Active, Focus, Disabled
 - Context-adaptive depth: MVP / Growth / Enterprise scaling
+- Autonomous Execution Protocol: context bootstrap → skill routing → evidence tagging → self-audit → phase transition check

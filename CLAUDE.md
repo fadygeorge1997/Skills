@@ -26,7 +26,29 @@ The primary agent in this workspace. A comprehensive 7-phase UX workflow system.
 - **Templates**: 24 artifact templates in `templates/`
 - **Checklists**: 7 Definition-of-Done checklists in `checklists/`
 - **Specs**: Feature specification with contracts in `specs/001-ux-design-agent/`
-- **Rules**: Context engineering rules in `rules/`
+- **Rules**: Orchestration and quality rules in `rules/`
+
+### Rules (Orchestration Layer)
+
+| File | Purpose |
+|------|---------|
+| `rules/context-engineering.md` | Output format rules, structured templates, evidence tagging |
+| `rules/agent-coordination.md` | Agent invocation priority, inter-agent data flow, conflict resolution, phase transitions |
+| `rules/iteration-workflows.md` | Loop-back triggers (mandatory vs advisory), loop-back protocol, forward-only conditions |
+| `rules/skill-routing.md` | Context Bootstrap Protocol, Skill Routing Table (200+ mapped skills), Command Workflow Chains, Impeccable Standard Self-Audit, Auto-Routing Decision Tree |
+
+### Autonomous Execution
+
+The UX agent self-loads context before every phase (see `rules/skill-routing.md` → Context Bootstrap Protocol). It:
+1. Reads phase-specific references, templates, and checklists automatically
+2. Checks existing `ux/` artifacts to avoid duplicate work
+3. Routes to complementary skills based on user intent (Skill Routing Table)
+4. **Invokes ANY skill** via the `Skill` tool — all 6 agents have full skill access
+5. Uses `Skill(skill: "find-skills")` to discover skills beyond the routing table (1000+ available)
+6. Chains spec-kit commands (`speckit-full`, `speckit-analyze`, `speckit-plan`, `speckit-tasks`) for reasoning and planning
+7. Tags all claims with `[EVIDENCE]`, `[ASSUMPTION]`, or `[MEASURED]`
+8. Runs the Impeccable Standard Self-Audit after every deliverable
+9. Checks Definition of Done and recommends phase transitions or loop-backs
 
 ## Complementary Skills Access
 
@@ -124,6 +146,7 @@ The UX agent auto-detects and leverages these MCP servers when connected:
 | **Playwright** | Browser automation, flow testing | Prototype, Validate |
 | **Chrome DevTools** | Lighthouse audits, performance tracing, screenshots | Validate, Optimize |
 | **Claude Preview** | Live HTML preview, click/fill/screenshot | Prototype, Validate |
+| **Figma (native)** | `get_design_context`, `get_screenshot`, `get_variable_defs`, `search_design_system`, `get_code_connect_map` | Prototype, Handoff |
 | **shadcn-ui** | Component lookup, audit checklists | IA, Prototype |
 | **shadcn-community** | Community themes and components | Prototype |
 | **Storybook-Figma** | Design-to-code bridging, Figma integration | Prototype, Handoff |
@@ -132,10 +155,31 @@ The UX agent auto-detects and leverages these MCP servers when connected:
 
 ## Spec Kit Integration
 
-The UX agent works with Spec Kit commands:
-- `/speckit.specify` + `/ux.define` - Problem statements feed into specs
-- `/speckit.plan` + `/ux.ia` - IA constraints inform implementation plans
-- `/speckit.tasks` - UX work items appear alongside engineering tasks
+The UX agent works with all Spec Kit commands via `Skill` tool:
+- `speckit-full` — Full end-to-end spec workflow (preferred when no spec.md exists)
+- `speckit-analyze` + `/ux.discover` — Analyze existing product/codebase
+- `speckit-clarify` + `/ux.define` — Clarify ambiguous requirements
+- `speckit-specify` + `/ux.define` — Problem statements feed into formal specs
+- `speckit-plan` + `/ux.ia` — IA constraints inform implementation plans
+- `speckit-tasks` — UX work items appear alongside engineering tasks
+- `speckit-implement` + `/ux.handoff` — Implement from handoff specs
+- `speckit-checklist` + `/ux.validate` — Verify implementation completeness
+- `speckit-taskstoissues` — Convert tasks to GitHub/Linear issues
+
+## Superpowers Integration
+
+- `superpowers:brainstorm` — Creative ideation before any phase
+- `superpowers:write-plan` — Write implementation plans
+- `superpowers:execute-plan` — Execute plans step by step
+- `superpowers:verification-before-completion` — Final verification
+
+## Figma Integration
+
+- `figma:implement-design` — Implement designs from Figma files
+- `figma:create-design-system-rules` — Create design system from Figma
+- `figma:code-connect-components` — Map Figma ↔ code components
+- `figma-friend:figma-designer` — Full Figma design workflow
+- `figma-friend:clone-ui` — Clone UI from Figma file
 
 ## Conventions
 

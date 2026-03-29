@@ -43,7 +43,9 @@ Design implications:
 - Platform conventions matter: follow iOS HIG or Material Design guidelines
 
 ### Doherty Threshold
-**Productivity soars when a system responds in under 400 milliseconds.**
+**Productivity soars when a system responds in under 300 milliseconds.**
+
+Modern user expectations have shifted to <300ms for perceived instantaneity (updated from the original 400ms threshold established in 1982). For mobile on constrained networks, aim for <500ms with skeleton/progress indicators.
 
 Design implications:
 - Loading skeletons instead of spinners (perceived performance)
@@ -52,6 +54,26 @@ Design implications:
 - Animate transitions to mask loading (300-500ms animations)
 - If >1s delay is unavoidable, show progress indicators
 - If >10s delay, allow background processing with notifications
+
+### Tesler's Law (Conservation of Complexity)
+**Every application has an inherent amount of complexity that cannot be removed. Ensure that as much as possible of the burden is lifted from the user.**
+
+Design implications:
+- If a task is complex, the system — not the user — should handle the complexity
+- Identify irreducible complexity and absorb it into the system's logic
+- Pre-fill, auto-detect, and intelligently default wherever possible
+- Don't simplify the UI at the cost of pushing complexity onto the user (e.g., forcing users to format data manually)
+- Accept that some features require sophisticated implementation to appear simple
+
+### Weber's Law (Just Noticeable Difference)
+**The change in a stimulus that will be just noticeable is a constant ratio of the original stimulus.**
+
+Design implications:
+- Small changes to large elements go unnoticed — make UI changes proportionally visible
+- When updating prices, sizes, or spacing, the change must be proportional to the original to be perceived
+- Use this principle in A/B testing: ensure variants are different enough to be noticed
+- Progressive changes (slow animation of values) are perceived differently than abrupt changes
+- In dark mode or theme transitions, ensure contrast changes are proportionally significant
 
 ### Postel's Law (Robustness Principle)
 **Be liberal in what you accept, conservative in what you send.**
@@ -262,7 +284,7 @@ When designing any interface, verify against these categories:
 - [ ] Primary CTAs follow Fitts's Law (large, reachable, in thumb zone on mobile)
 - [ ] Number of choices follows Hick's Law (minimal, progressive disclosure)
 - [ ] Patterns follow Jakob's Law (familiar conventions)
-- [ ] Response times meet Doherty Threshold (<400ms perceived)
+- [ ] Response times meet Doherty Threshold (<300ms perceived)
 
 **Cognitive Load:**
 - [ ] Information is chunked per Miller's Law (7 +/- 2 groups)
@@ -324,3 +346,12 @@ Each UX law has accessibility implications:
 | **Gestalt: Figure-Ground** | Sufficient contrast benefits low-vision users |
 
 Accessibility isn't a separate concern — it's built into the same psychological principles that make interfaces usable for everyone.
+
+---
+
+### Cross-References
+- For applying laws during competitive UX teardowns → `competitive-analysis.md`
+- For state design implications (Doherty Threshold) → `ideation-prototyping.md`
+- For dark pattern detection in AI interfaces → `agentic-ai-design.md`
+- For MENA-specific touch zone patterns → `arabic-rtl-mena.md`
+- For measuring law compliance via metrics → `metrics-optimization.md`

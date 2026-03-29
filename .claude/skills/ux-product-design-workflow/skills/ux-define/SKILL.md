@@ -83,6 +83,10 @@ From Phase 1 (Discovery):
 | Opportunity Solution Tree | Hierarchical diagram | `templates/opportunity-solution-tree-template.md` |
 | Design Brief | 1-2 page summary | `templates/design-brief-template.md` |
 
+### Quality Criteria
+
+A persona is complete when: (1) behaviors are grounded in observed research data (not assumed), (2) JTBD statement follows the 4-part format, (3) at least 3 evidence citations support key attributes.
+
 ---
 
 ## Persona Template
@@ -224,6 +228,14 @@ From Phase 1 (Discovery):
 - **Problem:** Designing for one user type when multiple exist
 - **Solution:** Create 2-4 personas, prioritize primary for this initiative
 
+### Feature-Framed Problems
+- **Problem:** Writing problem statements that are disguised feature requests ("Users need a dropdown" vs "Users need to quickly select their bank").
+- **Solution:** Apply the "so that" test — if the statement names a UI element instead of a user outcome, reframe it.
+
+### Personas Without Behaviors
+- **Problem:** Demographics without behavioral patterns are marketing segments, not design tools.
+- **Solution:** Every persona must include observed behaviors with evidence citations. If you only have demographics, label it a proto-persona and schedule validation research.
+
 ---
 
 ## Definition of Done
@@ -245,17 +257,30 @@ Phase 2 is complete when:
 
 ## Cross-Phase References
 
-**Input from Phase 1:**
-- Empathy maps → Persona behaviors and feelings
-- JTBD statements → Persona JTBD field
-- Competitive analysis → Journey map touchpoints
+**Required input from Phase 1 (Discovery):**
+- Research synthesis with themed insights
+- Empathy maps per segment → Persona behaviors and feelings
+- JTBD statements and job maps → Persona JTBD field
+- Competitive analysis findings → Journey map touchpoints
 - Opportunity backlog → Opportunity Solution Tree
+- Four-Risk Gate assessment
+- Design brief with constraints
+
+**Artifacts this phase produces for the next phase (Phase 3):**
+- User personas (2-4) with behaviors, goals, and JTBD statements
+- Journey maps with pain points and opportunities
+- Problem statements in canonical format
+- HMW statements (calibrated)
+- Opportunity Solution Tree
+- Updated design brief with problem focus
 
 **Output feeds into:**
 - Phase 3 (IA): Sitemap structure from persona mental models
 - Phase 3 (IA): User flows reference personas by name
 - Phase 4 (Design): Laws of UX application based on persona behaviors
 - Phase 5 (Validate): Test plan participants match persona segments
+
+**Loop-back triggers:** Return to Phase 1 (Discovery) when persona validation reveals significant gaps in research, when contradictory evidence cannot be resolved with existing data, or when new user segments are identified that were not covered in initial research.
 
 ---
 

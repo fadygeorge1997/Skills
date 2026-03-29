@@ -223,6 +223,16 @@ This checklist defines the criteria for establishing a healthy optimization rhyt
 
 ---
 
+## Loop-Back Triggers
+
+- D7 retention <20% → loop back to Phase 1 for fundamental research
+- 3+ A/B tests with no significant lift → loop back to Phase 2 to reframe hypothesis
+- New user segment discovered in analytics → loop back to Phase 1 for targeted research
+- Support tickets cluster around a specific flow → loop back to Phase 5 for targeted testing
+- Funnel drop-off >50% at a specific step → loop back to Phase 3 or 4 for redesign
+
+---
+
 ## Looping Back
 
 When new user needs emerge or metrics stall:

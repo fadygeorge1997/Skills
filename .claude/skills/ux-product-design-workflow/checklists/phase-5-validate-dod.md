@@ -25,6 +25,9 @@ This checklist defines the criteria for completing Phase 5 (Validation & Usabili
 - [ ] Consent forms prepared
 - [ ] Incentives arranged
 
+#### Verification
+- Evidence: participant screener responses confirming persona match documented in `ux/validate/`
+
 ### Test Execution
 
 - [ ] Think-aloud protocol used
@@ -48,6 +51,9 @@ This checklist defines the criteria for completing Phase 5 (Validation & Usabili
 - [ ] Keyboard navigation tested
 - [ ] Screen reader tested (VoiceOver or NVDA)
 - [ ] Color contrast verified (4.5:1)
+
+#### Verification
+- Evidence: automated scan report saved in `ux/validate/accessibility-audit.md` with `[MEASURED: tool-name]` tags
 
 ### Human-AI Testing (if applicable)
 
@@ -163,6 +169,9 @@ This checklist defines the criteria for completing Phase 5 (Validation & Usabili
 | Critical findings addressed or documented | ✓/✗ |
 | Retest completed for critical fixes | ✓/✗ |
 
+#### Verification
+- Evidence: retest results documented with before/after comparison for each critical fix
+
 ---
 
 ## Quality Assurance
@@ -205,6 +214,18 @@ This checklist defines the criteria for completing Phase 5 (Validation & Usabili
 | Single participant | ✓/✗ | [5+ per segment] |
 | Only happy path | ✓/✗ | [Errors and edge cases tested] |
 | Fixing everything at once | ✓/✗ | [Prioritized by severity] |
+
+---
+
+## Loop-Back Triggers
+
+This phase generates the most loop-backs. Follow these rules:
+- Task completion <50% on ANY core flow → MANDATORY loop-back to Phase 3 or 4
+- Task completion 50-80% → ADVISORY loop-back to Phase 4
+- Severity-4 issues in >2 flows → MANDATORY loop-back to Phase 3
+- SUS score <68 → ADVISORY loop-back to Phase 4
+- WCAG AA failure on core flows → MANDATORY loop-back to Phase 4
+- Do NOT advance to Phase 6 with unresolved severity-4 issues
 
 ---
 
