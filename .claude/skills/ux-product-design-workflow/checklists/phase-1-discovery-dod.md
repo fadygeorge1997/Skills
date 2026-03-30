@@ -16,6 +16,9 @@ This checklist defines the criteria for completing Phase 1 (Discovery & Research
 - [ ] Target user segments hypothesized (to be validated)
 - [ ] Context mode set (MVP/Growth/Enterprise)
 
+#### Verification
+- Evidence: stakeholder alignment meeting notes or async approval documented in `ux/research/`
+
 ### Research Plan
 
 - [ ] Research methodology selected and documented
@@ -72,6 +75,9 @@ This checklist defines the criteria for completing Phase 1 (Discovery & Research
 - [ ] Contradictions surfaced with resolution approach
 - [ ] Research sources cited and accessible
 
+#### Verification
+- Evidence: spot-check 5 random claims — each must have an `[EVIDENCE: source]` or `[ASSUMPTION: reason]` tag
+
 ### Design Brief
 
 - [ ] Problem summary articulated
@@ -127,9 +133,19 @@ This checklist defines the criteria for completing Phase 1 (Discovery & Research
 | Anti-Pattern | Avoided? | Notes |
 |--------------|----------|-------|
 | Confirmation tourism | ✓/✗ | [Evidence of seeking disconfirming data] |
-| Persona theater | ✓/✗ | [Personas grounded in research] |
+| Persona theater | ✓/✗ | [Personas grounded in research — Evidence: each persona attribute has at least one [EVIDENCE: source] tag] |
 | Analysis paralysis | ✓/✗ | [Timeboxed and converged] |
 | Skipping to solutions | ✓/✗ | [Focused on understanding, not building] |
+
+---
+
+## Loop-Back Triggers from Later Phases
+
+Return to Phase 1 Discovery when:
+- Phase 7 metrics show D7 retention <20% (product-market fit issue)
+- Phase 5 testing reveals fundamental misunderstanding of user needs
+- Phase 7 analytics discover a new user segment not covered in original research
+- Support ticket analysis reveals pain points not captured in empathy maps
 
 ---
 

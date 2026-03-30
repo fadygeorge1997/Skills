@@ -14,7 +14,7 @@
 
 ## HEART Framework
 
-Developed by Google's UX research team, HEART shifts focus from basic traffic metrics to nuanced experience quality.
+Developed by Google's UX research team (Kerry Rodden et al.), HEART shifts focus from basic traffic metrics to nuanced experience quality.
 
 ### The Five Dimensions
 
@@ -301,7 +301,7 @@ The cycle is continuous: Discover > Define > Develop > Deliver > Measure > Disco
 
 ### Concept
 
-A North Star Metric (NSM) is the single metric that best captures the core value your product delivers to customers. It aligns the entire organization around one measurable outcome.
+A North Star Metric (NSM) is the single metric that best captures the core value your product delivers to customers. It aligns the entire organization around one measurable outcome. The North Star Metric concept was popularized by Amplitude and Reforge.
 
 **Characteristics of a good NSM:**
 - Reflects value delivered to users (not just revenue)
@@ -516,3 +516,13 @@ The optimization phase feeds directly back into the discovery phase. Loop back w
 - **Quarterly cadence:** Even without crisis signals, schedule quarterly deep-discovery cycles
 
 The workflow is a continuous cycle: **Discover → Define → Develop → Deliver → Measure → Discover again.**
+
+---
+
+### Cross-References
+- For UX law compliance metrics → `laws-of-ux.md` (Doherty Threshold → response time metrics)
+- For competitive benchmark metrics → `competitive-analysis.md`
+- For state design impact on task success → `ideation-prototyping.md`
+- For A/B test UX considerations → `usability-testing.md`
+- For AI-driven optimization patterns → `agentic-ai-design.md`
+- For MENA-specific market benchmarks → `arabic-rtl-mena.md`

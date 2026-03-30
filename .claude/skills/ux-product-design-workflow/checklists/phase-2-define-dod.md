@@ -29,6 +29,9 @@ This checklist defines the criteria for completing Phase 2 (Define & Problem Fra
 - [ ] Every attribute tagged with evidence or marked as assumption
 - [ ] Confidence level documented (evidence-backed vs. hypothesis)
 
+#### Verification
+- Evidence: each persona attribute has at least one `[EVIDENCE: source]` tag or `[ASSUMPTION: reason]` tag
+
 ### Journey Maps
 
 - [ ] Journey maps created for primary personas (min 1 per persona)
@@ -81,6 +84,9 @@ This checklist defines the criteria for completing Phase 2 (Define & Problem Fra
 - [ ] Problem prioritization agreed
 - [ ] Team aligned on focus area
 
+#### Verification
+- Evidence: meeting notes or async approval documented in `ux/define/` confirming stakeholder alignment
+
 ---
 
 ## Deliverables Checklist
@@ -131,6 +137,9 @@ This checklist defines the criteria for completing Phase 2 (Define & Problem Fra
 | Everyone on the team agrees on the above | ✓/✗ |
 | Problem is grounded in research evidence | ✓/✗ |
 
+#### Verification
+- Evidence: each problem statement includes at least one `[EVIDENCE: source]` citation from Phase 1 research
+
 ---
 
 ## Quality Assurance
@@ -173,6 +182,16 @@ This checklist defines the criteria for completing Phase 2 (Define & Problem Fra
 | Solution-framed problems | ✓/✗ | [Needs, not features] |
 | Evidence-free claims | ✓/✗ | [All claims tagged] |
 | Single persona focus | ✓/✗ | [Multiple personas, clear priority] |
+
+---
+
+## Loop-Back Triggers from Later Phases
+
+Return to Phase 2 Define when:
+- Phase 5 testing invalidates persona assumptions (behaviors don't match)
+- Phase 7 A/B tests consistently show no lift (hypothesis may be wrong)
+- Phase 3 card sorting reveals mental models contradicting personas
+- Phase 7 cohort analysis shows different behavior patterns than personas predicted
 
 ---
 

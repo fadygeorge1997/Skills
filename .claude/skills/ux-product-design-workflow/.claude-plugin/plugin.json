@@ -1,7 +1,7 @@
 {
   "name": "ux-product-design-workflow",
-  "description": "Comprehensive 7-phase UX & Product Design workflow. Covers Discovery, Define, IA, Prototyping, Validation, Handoff, and Optimization with 6 autonomous agents, 50+ complementary skills, 24 templates, 7 DoD checklists, and MCP integrations for accessibility auditing, browser automation, design system lookup, and prototype review.",
-  "version": "1.1.1",
+  "description": "Autonomous 7-phase UX & Product Design workflow with self-loading context, 200+ mapped skills, command workflow chains, and Impeccable Standard self-audit. Covers Discovery, Define, IA, Prototyping, Validation, Handoff, and Optimization with 6 autonomous agents, full Skill tool access to 1000+ skills, spec-kit integration, Figma MCP, 24 templates, 7 DoD checklists, non-linear iteration with loop-back triggers, agent coordination rules, evidence tagging, and MCP integrations for accessibility, browser automation, design systems, analytics, and prototype review.",
+  "version": "1.2.0",
   "author": {
     "name": "Fady"
   },

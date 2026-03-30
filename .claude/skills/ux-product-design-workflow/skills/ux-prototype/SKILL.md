@@ -27,7 +27,7 @@ description: >
 From Phase 3 (IA):
 - [ ] Sitemap with navigation structure
 - [ ] User flows with decision points
-- [ ] State inventories (all 7+ states)
+- [ ] State inventories (all 8 content states from Phase 3)
 - [ ] Wireframe descriptions
 - [ ] Card sorting validation results (if conducted)
 
@@ -55,7 +55,8 @@ From Phase 3 (IA):
 
 ### 3. High-Fidelity Design
 - [ ] Create realistic content (no Lorem Ipsum)
-- [ ] Design all interaction states
+- [ ] Design all interaction states (default, hover, active, focus, disabled) per interactive element
+- [ ] Refine all 8 content states at high fidelity (default, empty, loading, partial, error, success, offline, permission)
 - [ ] Apply micro-interactions purposefully
 - [ ] Implement responsive breakpoints
 - [ ] Consider RTL/MENA if applicable
@@ -132,7 +133,7 @@ From Phase 3 (IA):
 ```
 
 ### Doherty Threshold
-> <400ms response feels instant
+> <300ms response feels instant
 
 **Application:**
 - Skeleton screens during loading
@@ -339,8 +340,22 @@ Trigger → Action → Animation → Feedback
 - **Solution:** Follow platform guidelines (iOS HIG, Material Design)
 
 ### Over-Animation
-- **Problem:** Animations that slow users down
-- **Solution:** Every animation should have purpose, be skippable
+- **Problem:** Animations that slow users down or serve no functional purpose
+- **Solution:** Every animation must serve one of: guide attention, confirm action, or show state change. All animations should respect `prefers-reduced-motion`.
+
+### Design Tokens Without Semantic Layer
+- **Problem:** Going straight from primitive tokens to component tokens skips the semantic layer that enables theming and consistency.
+- **Solution:** Always define the 3-layer hierarchy: primitive → semantic → component. Semantic tokens (e.g., `bg-primary`) create the abstraction layer needed for dark mode, theming, and design system evolution.
+
+### Lorem Ipsum in Prototypes
+- **Problem:** Placeholder text masks content-driven design issues (truncation, line breaks, localization).
+- **Solution:** Use realistic content from actual use cases. For Arabic/RTL, test with real Arabic strings — not transliterated Latin characters.
+
+---
+
+## Quality Criteria
+
+A prototype is testable when: (1) realistic content replaces all placeholder text, (2) all 5 interaction states are designed per interactive element, (3) all 8 content states are refined at high fidelity, (4) at least one core flow is fully interactive end-to-end, (5) Nielsen's 10 heuristic self-check is completed with no severity-4 issues.
 
 ---
 
@@ -351,7 +366,8 @@ Phase 4 is complete when:
 - [ ] Laws of UX applied as concrete design actions (documented)
 - [ ] Design system token mapping complete (primitive > semantic > component)
 - [ ] High-fidelity designs for all key screens with realistic content
-- [ ] All interaction states designed (default, hover, active, focus, disabled, error, loading, empty, success)
+- [ ] All 5 interaction states designed per element (default, hover, active, focus, disabled)
+- [ ] All 8 content states refined at high fidelity (from Phase 3 state inventory)
 - [ ] Micro-interaction specs documented with timing and purpose
 - [ ] Responsive behavior rules per breakpoint documented
 - [ ] RTL/MENA patterns applied (if applicable)

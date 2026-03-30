@@ -22,6 +22,9 @@ This checklist defines the criteria for completing Phase 3 (IA & Interaction Des
 
 - [ ] Card sorting conducted (open, closed, or hybrid)
 - [ ] Results analyzed for user mental model alignment
+
+#### Verification
+- Evidence: card sorting results documented with agreement matrix or dendrograms in `ux/ia/`
 - [ ] Sitemap created organized by user needs (not org chart)
 - [ ] Navigation hierarchy validated with Hick's Law (≤7 items per level)
 - [ ] Tree testing validation approach defined
@@ -46,7 +49,7 @@ This checklist defines the criteria for completing Phase 3 (IA & Interaction Des
 ### State Inventory
 
 - [ ] All interactive elements identified
-- [ ] All 7+ states documented per element:
+- [ ] All 8 content states documented per screen:
   - [ ] Default
   - [ ] Empty
   - [ ] Loading
@@ -64,6 +67,9 @@ This checklist defines the criteria for completing Phase 3 (IA & Interaction Des
 - [ ] Focus on layout, hierarchy, and flow
 - [ ] Behavioral annotations included
 - [ ] Wireframes tested (hallway testing minimum)
+
+#### Verification
+- Evidence: hallway test feedback documented with at least 3 participant observations in `ux/ia/`
 
 ### Design Patterns
 
@@ -133,7 +139,7 @@ This checklist defines the criteria for completing Phase 3 (IA & Interaction Des
 | Criterion | Status |
 |-----------|--------|
 | 2-3 strong concepts selected | ✓/✗ |
-| IA validated (card sorting or tree testing planned) | ✓/✗ |
+| IA validated (card sorting or tree testing planned) — Evidence: validation results documented in `ux/ia/` | ✓/✗ |
 | Wireframes team-ready for refinement | ✓/✗ |
 | All core flows mapped with error paths | ✓/✗ |
 | All interactive elements have state documentation | ✓/✗ |
@@ -164,7 +170,7 @@ This checklist defines the criteria for completing Phase 3 (IA & Interaction Des
 | Check | Status |
 |-------|--------|
 | All interactive elements inventoried | ✓/✗ |
-| All 7+ states covered | ✓/✗ |
+| All 8 content states covered | ✓/✗ |
 | Empty state has CTA | ✓/✗ |
 | Error state has recovery path | ✓/✗ |
 
@@ -187,7 +193,17 @@ This checklist defines the criteria for completing Phase 3 (IA & Interaction Des
 | IA by org chart | ✓/✗ | [User mental model used] |
 | Premature convergence | ✓/✗ | [3+ concepts explored] |
 | Wireframe theater | ✓/✗ | [Hallway testing done] |
-| Missing states | ✓/✗ | [All 7+ states documented] |
+| Missing states | ✓/✗ | [All 8 content states documented] |
+
+---
+
+## Loop-Back Triggers from Later Phases
+
+Return to Phase 3 IA when:
+- Phase 5 task completion <60% on a core flow (IA may be wrong)
+- Phase 6 engineering review reveals infeasible flow architecture
+- Phase 5 tree testing shows <60% findability on primary tasks
+- Phase 7 funnel analysis shows unexpected drop-off at navigation decision points
 
 ---
 

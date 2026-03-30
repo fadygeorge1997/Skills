@@ -130,6 +130,37 @@ The tension between these three perspectives is productive. No single discipline
 
 **Phase Transition Signals:** Each phase has a "Definition of Done" checklist. Don't advance until you've met the transition criteria — they're documented in each phase's reference file. Moving forward prematurely is the most common cause of product failure.
 
+### Non-Linear Workflows & Iteration
+
+Real product work is not a straight line. Phases loop back when new evidence surfaces:
+
+| Trigger | Loop-Back Target | Action |
+|---------|-----------------|--------|
+| Phase 5 testing reveals users don't understand core concept | Phase 2 (Define) | Revisit problem statements and personas with new evidence |
+| Phase 5 task completion <60% on a core flow | Phase 3 (IA) or Phase 4 (Prototype) | Restructure flow or redesign interaction |
+| Phase 7 metrics show D7 retention <20% | Phase 1 (Discovery) | Re-examine whether you're solving the right problem |
+| Phase 4 engineering review reveals infeasibility | Phase 3 (IA) | Explore alternative solution architecture |
+| Phase 6 handoff reveals undocumented edge cases | Phase 4 (Prototype) | Design missing states, update prototype |
+| Phase 7 A/B test shows no significant lift | Phase 2 (Define) | Reframe the hypothesis, re-examine assumptions |
+
+**Loop-back rules:**
+1. Always carry forward the evidence that triggered the loop-back — don't restart from scratch
+2. Update the Four-Risk Gate assessment when looping back
+3. Only revisit the minimum scope needed — don't re-do entire phases
+4. Document the loop-back reason in the project's phase-status.json
+
+### Sample Size Guide
+
+Different methods need different participant counts — here's why:
+
+| Method | Recommended N | Rationale |
+|--------|--------------|-----------|
+| User interviews (Phase 1) | 5-8 per segment | Qualitative saturation: ~85% of themes emerge by user 5 (Nielsen/Landauer) |
+| Card sorting (Phase 3) | 15-30 | Statistical: need enough data for dendrogram clustering and agreement metrics |
+| Usability testing (Phase 5) | 5-8 per segment | Diminishing returns: 5 users find ~85% of usability issues |
+| A/B testing (Phase 7) | Calculate per-test | Statistical power: depends on baseline conversion, MDE, and significance level |
+| Tree testing (Phase 3) | 30-50 | Quantitative: need statistical confidence in path success rates |
+
 ---
 
 ## Phase 1: Discovery & Research
@@ -182,6 +213,8 @@ This format captures context (when), motivation (want), desired outcome (so I ca
 - **Persona theater:** Creating personas from demographics and guesses instead of behavioral research data.
 - **Analysis paralysis:** Researching endlessly without converging. Set a timebox. 2-4 weeks is usually enough.
 - **Skipping to solutions:** "I already know what to build" — the most expensive assumption in product development.
+- **Solo research:** Conducting research without stakeholder involvement. Insights that aren't shared don't drive decisions.
+- **Data hoarding:** Collecting data without documenting it in a retrievable format. Raw notes decay; tagged evidence compounds.
 
 > Deep dive: `references/discovery-synthesis.md` — JTBD interview questions, empathy mapping, 5W1H, CATWOE, cognitive prompting for AI synthesis, bias mitigation.
 > Deep dive: `references/competitive-analysis.md` — competitive analysis frameworks, UX teardown methodology, positioning strategy.
@@ -272,29 +305,39 @@ QUOTE: "I'd rather spend an hour in line than lose money to a glitch."
 - [ ] Create sitemap / app map reflecting user mental models
 - [ ] Map user flows and task flows for core scenarios
 - [ ] Define interaction patterns for common actions (CRUD, search, filter, navigate)
-- [ ] Design all states: default, empty, loading, error, success, partial, offline, permission
+- [ ] Design all 8 content states per screen: default, empty, loading, partial, error, success, offline, permission
 - [ ] Create low-fidelity wireframes focused on layout, hierarchy, and flow
 - [ ] Validate IA with tree testing (target >80% on primary paths)
 
-### State Design — The Often-Forgotten States
+### State Design — The 8 Content States + Interaction States
 
-Every screen has more than just the "happy path." Design these explicitly:
+Every screen has content states and interaction states. Both must be designed explicitly.
+
+**8 Content States** (design these per screen/component in Phase 3):
 
 | State | What the user sees | Design question |
 |-------|-------------------|----------------|
+| **Default** | Normal data displayed | Is the hierarchy clear? Is the primary action obvious? |
 | **Empty** | No data yet | How do we explain and motivate first action? |
 | **Loading** | Data being fetched | Skeleton, spinner, or progress bar? |
 | **Partial** | Some data available | What loads first? What's deferred? |
-| **Error** | Something broke | Can they retry? Is data preserved? |
+| **Error** | Something broke | Can they retry? Is data preserved? What's the error message? |
 | **Success** | Action completed | What's the next logical step? Delight moment? |
-| **Offline** | No network | What's cached? What's queued? |
+| **Offline** | No network | What's cached? What's queued for sync? |
 | **Permission** | Access needed | Why do we need this? What if they refuse? |
+
+**Interaction States** (design these per interactive element in Phase 4):
+- **Default**, **Hover**, **Active/Pressed**, **Focus** (keyboard), **Disabled**
+
+The two categories are orthogonal: a button can be in its "hover" interaction state while the screen shows the "loading" content state.
 
 ### Anti-Patterns
 
 - **Premature convergence:** Falling in love with the first idea. Force yourself to generate alternatives.
 - **IA by org chart:** Structuring navigation around internal departments instead of user mental models.
 - **Wireframe theater:** Creating wireframes no one tests. Even 5 minutes of hallway testing beats zero.
+- **Skipping state design:** Only designing the happy path. Empty, error, and offline states are where trust is built or broken.
+- **Ignoring feasibility:** Designing flows without engineering input. Check feasibility before investing in detailed wireframes.
 
 > Deep dive: `references/ideation-prototyping.md` — SCAMPER details, card sorting methodology, Design Sprint (5-day), prototyping fidelity guide, design token architecture.
 
@@ -315,11 +358,13 @@ These aren't suggestions; they're how human brains process interfaces:
 | **Fitts's Law** | Bigger + closer = faster to tap | Primary CTAs: large, thumb-zone, high contrast |
 | **Hick's Law** | More choices = slower decisions | Max 5-7 nav items; progressive disclosure |
 | **Jakob's Law** | Users expect your site to work like others | Use platform conventions; don't reinvent search |
-| **Doherty Threshold** | <400ms response feels instant | Skeleton screens, optimistic UI, preloading |
+| **Doherty Threshold** | <300ms response feels instant | Skeleton screens, optimistic UI, preloading |
 | **Miller's Law** | Working memory holds ~7 items | Chunk form fields; group related info |
 | **Peak-End Rule** | Memory = peak moment + final moment | Design delight at completion; never end on an error |
 | **Zeigarnik Effect** | Incomplete tasks nag the mind | Progress bars; "3 of 5 steps complete" |
 | **Aesthetic-Usability** | Beautiful = perceived as more usable | Polish builds trust, especially in fintech |
+| **Tesler's Law** | Complexity can't be destroyed, only moved | Push complexity to the system, not the user |
+| **Postel's Law** | Be liberal in what you accept, strict in output | Flexible input parsing; consistent, predictable output |
 
 ### Design System Integration
 
@@ -352,7 +397,8 @@ This is not translation — it's a complete layout and cultural rethink:
 - [ ] Apply Laws of UX systematically to all core flows
 - [ ] Build high-fidelity prototypes with realistic content (not Lorem Ipsum)
 - [ ] Integrate design system tokens and components
-- [ ] Handle ALL states: default, hover, active, focus, disabled, error, loading, empty, success
+- [ ] Handle all interaction states per element: default, hover, active, focus, disabled
+- [ ] Verify all 8 content states from Phase 3 are refined at high fidelity
 - [ ] Apply RTL mirroring and localization patterns (if applicable)
 - [ ] Verify responsive behavior across breakpoints (mobile-first)
 - [ ] Design micro-interactions purposefully (transitions, feedback animations)
@@ -513,11 +559,83 @@ AI is a co-pilot, not a replacement. It accelerates every phase when used with j
 | **2. Define** | Synthesis partner | Pattern recognition, persona drafting, journey mapping | Making value judgments about priorities |
 | **3. IA & Interaction** | Structure co-pilot | Generating variations, exploring edge cases, card sort analysis | Knowing what's actually feasible |
 | **4. Prototype** | Production accelerator | Layout generation, component code, localization | Understanding cultural nuance deeply |
-| **5. Validate** | Analysis engine | Auto-tagging findings, accessibility scanning | Judging subjective experience quality |
-| **6. Handoff** | Documentation generator | Acceptance criteria, state docs, edge case catalogs | Anticipating all engineering questions |
-| **7. Optimize** | Monitoring agent | Anomaly detection, experiment proposals | Making business strategy decisions |
+| **5. Validate** | Analysis engine | Auto-tagging findings, accessibility scanning, severity clustering | Judging subjective experience quality |
+| **6. Handoff** | Documentation generator | Acceptance criteria, state docs, edge case catalogs, component cross-refs | Anticipating all engineering edge-case questions |
+| **7. Optimize** | Monitoring agent | Anomaly detection, experiment proposals, cohort segmentation | Making business strategy decisions |
 
 > Deep dive: `references/agentic-ai-design.md` — Plan-Act-Reflect pattern, multi-agent collaboration UX, observability design, the evolving role of UX as "Architect of Human-AI Collaboration."
+
+---
+
+## Autonomous Execution Protocol
+
+When executing any phase of this workflow, follow this protocol to ensure self-sufficient, high-quality output.
+
+### Step 1: Bootstrap Context
+
+Before starting ANY phase work, self-load the required context. See `rules/skill-routing.md` → Context Bootstrap Protocol for exact file paths.
+
+**Mandatory reads for every phase:**
+- `rules/context-engineering.md` — Output format rules
+- `rules/agent-coordination.md` — Agent invocation priority and data flow
+- `rules/iteration-workflows.md` — Loop-back conditions and forward-only rules
+- `rules/skill-routing.md` — Skill routing decisions and self-audit checklist
+
+**Phase-specific reads:** Load the references, templates, and checklists listed in `rules/skill-routing.md` → Step 2 and Step 3 tables.
+
+**Existing artifacts:** Glob `ux/` subdirectories and read `ux/phase-status.json` (if it exists) to understand what's already been produced.
+
+### Step 2: Route to the Right Skill
+
+All agents have access to the `Skill` tool, which can invoke **any installed skill** — not just the ones listed in the routing table. Use it:
+
+```
+Skill(skill: "jobs-to-be-done")        → JTBD analysis
+Skill(skill: "accessibility")          → WCAG compliance
+Skill(skill: "cro-methodology")        → Conversion optimization
+Skill(skill: "speckit-full")           → Full spec-kit reasoning workflow
+Skill(skill: "find-skills")            → Search 1000+ skills by keyword
+```
+
+**Routing priority:**
+1. Match user intent to the Skill Routing Table in `rules/skill-routing.md`
+2. If no match, search with `Skill(skill: "find-skills")` using keywords from the user's request
+3. If still no match, use the phase-specific sub-skill (`ux-discover` through `ux-optimize`)
+
+**Spec-Kit for planning**: When a phase requires structured reasoning, analysis, or specification — invoke `Skill(skill: "speckit-full")` for end-to-end spec workflow, or chain individual spec-kit commands (`speckit-analyze`, `speckit-plan`, `speckit-tasks`, `speckit-checklist`).
+
+### Step 3: Execute with Evidence Tagging
+
+Every claim in every artifact must be tagged:
+- `[EVIDENCE: source]` — Backed by research data, analytics, or user quotes
+- `[ASSUMPTION: reason]` — Explicitly flagged as unvalidated, with rationale
+- `[MEASURED: tool]` — Quantified via MCP tool (AccessLint, Lighthouse, Playwright)
+- `[CONTRADICTION]` — When new evidence conflicts with earlier findings
+
+### Step 4: Self-Audit (Impeccable Standard)
+
+After producing any deliverable, run the self-audit checklist in `rules/skill-routing.md` → Impeccable Standard Self-Audit. The five categories are:
+1. **Content Quality** — Zero placeholders, evidence-tagged claims, consistent terminology
+2. **Logical Completeness** — All 8 content states, all 5 interaction states, error paths, edge cases
+3. **Accessibility Compliance** — WCAG 2.1 AA, contrast ratios, keyboard nav, ARIA labels
+4. **Human-Centric Reasoning** — Traces to user needs, Ethical Design Hierarchy, Four-Risk Gate, cognitive load
+5. **Deliverable Formatting** — Correct `ux/` subdirectory, progressive disclosure, stakeholder calibration
+
+### Step 5: Check Phase Transition
+
+After completing work, evaluate the current phase's Definition of Done checklist (`checklists/phase-N-*.md`). If met, recommend advancement. If a loop-back trigger fires (see `rules/iteration-workflows.md`), recommend the target phase with evidence. Update `ux/phase-status.json`.
+
+### Data Self-Sufficiency
+
+The agent must gather its own context rather than asking the user for information it can derive:
+- **Codebase state** → Read files, glob directories, grep for patterns
+- **Design system** → Query shadcn-ui MCP, read component files, check Storybook
+- **Accessibility** → Run AccessLint MCP audits, Lighthouse via Chrome DevTools
+- **Live prototypes** → Use Claude Preview or Playwright for screenshots, interaction testing
+- **Library docs** → Use Context7 MCP for up-to-date API references
+- **Existing artifacts** → Glob `ux/**/*.md` before creating duplicates
+
+Only ask the user for information that cannot be derived from the codebase, MCP tools, or web search: business strategy decisions, stakeholder preferences, budget constraints, and timeline commitments.
 
 ---
 
@@ -531,6 +649,7 @@ AI is a co-pilot, not a replacement. It accelerates every phase when used with j
 | "I'm building the interface" | Phase 4: Design | `references/laws-of-ux.md` |
 | "I need to test my prototype" | Phase 5: Validate | `references/usability-testing.md` |
 | "My product is live, needs improvement" | Phase 7: Optimize | `references/metrics-optimization.md` |
+| "I need to prepare specs for engineers" | Phase 6: Handoff | `references/design-handoff.md` |
 | "I'm designing for Arabic/MENA" | Phase 4 + RTL | `references/arabic-rtl-mena.md` |
 | "I'm building AI-powered features" | Phase 5 + AI | `references/agentic-ai-design.md` |
 | "I need to hand off to developers" | Phase 6: Handoff | `references/design-handoff.md` |

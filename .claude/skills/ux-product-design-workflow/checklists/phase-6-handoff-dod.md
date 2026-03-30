@@ -19,7 +19,7 @@ This checklist defines the criteria for completing Phase 6 (Design-to-Engineerin
 
 ### State Documentation
 
-- [ ] All 7+ states documented per interactive element
+- [ ] All 8 content states documented per screen + 5 interaction states per element
 - [ ] State transition triggers defined
 - [ ] Content for each state specified
 - [ ] Error handling per state documented
@@ -235,9 +235,17 @@ This checklist defines the criteria for completing Phase 6 (Design-to-Engineerin
 | Anti-Pattern | Avoided? | Notes |
 |--------------|----------|-------|
 | Handoff and run | ✓/✗ | [Continuous collaboration planned] |
-| Incomplete states | ✓/✗ | [All 7+ states documented] |
+| Incomplete states | ✓/✗ | [All 8 content + 5 interaction states documented] |
 | Missing edge cases | ✓/✗ | [4 categories covered] |
 | Pixel-pushing | ✓/✗ | [Token-based specs] |
+
+---
+
+## Loop-Back Triggers
+
+- Engineer identifies 3+ undocumented edge cases → loop back to Phase 4 for state design
+- Engineering declares core approach infeasible → loop back to Phase 3 for alternative architecture
+- Missing accessibility specs → loop back to Phase 5 for audit completion
 
 ---
 

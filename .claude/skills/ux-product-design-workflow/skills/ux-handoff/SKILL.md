@@ -58,7 +58,7 @@ From Earlier Phases:
 - [ ] Animation and transition specs
 
 ### 2. State Documentation
-- [ ] All 7+ states per interactive element
+- [ ] All 8 content states per screen + 5 interaction states per interactive element
 - [ ] State transition triggers
 - [ ] Content for each state
 - [ ] Error handling per state
@@ -129,7 +129,7 @@ From Earlier Phases:
 - [ ] Typography (font, size, weight, line-height)
 - [ ] Colors (token names, not hex)
 - [ ] Border radius, shadows
-- [ ] States documented (all 7+)
+- [ ] States documented (8 content + 5 interaction)
 
 ## Interaction Documentation
 - [ ] Hover states
@@ -381,7 +381,7 @@ Offline → (queued) → Online → Sync
 
 ### Incomplete States
 - **Problem:** Only documenting happy path
-- **Solution:** Every interactive element needs all 7+ states
+- **Solution:** Every screen needs all 8 content states; every interactive element needs all 5 interaction states
 
 ### Missing Edge Cases
 - **Problem:** Edge cases discovered during development
@@ -391,6 +391,20 @@ Offline → (queued) → Online → Sync
 - **Problem:** Debating exact pixels from screenshots
 - **Solution:** Use design tokens, reference shared system
 
+### Screenshot-Based Handoff
+- **Problem:** Handing off screenshots instead of specs with tokens, states, and edge cases leads to interpretation errors and rework.
+- **Solution:** Every handoff document must include: design token references, all state transitions, edge case handling rules. Screenshots supplement specs, they don't replace them.
+
+### Missing Copy
+- **Problem:** Lorem Ipsum in handoff docs. Copy is a design material — placeholder text masks truncation, localization, and comprehension issues.
+- **Solution:** Final copy must be present in all handoff docs. If product copy doesn't exist yet, create draft copy that demonstrates realistic content length and tone, and flag it for copywriter review.
+
+---
+
+## Quality Criteria
+
+A handoff package is engineering-ready when: (1) every component has all 8 content states + 5 interaction states documented, (2) acceptance criteria are independently testable (Given/When/Then), (3) edge case catalog covers data, timing, permission, and connectivity scenarios, (4) all design tokens are named (no raw hex/px values), (5) engineering confirms zero open questions.
+
 ---
 
 ## Definition of Done
@@ -398,7 +412,7 @@ Offline → (queued) → Online → Sync
 Phase 6 is complete when:
 
 - [ ] Annotated specifications (component-by-component behavior)
-- [ ] State catalog covering all 7+ states per interactive element
+- [ ] State catalog covering all 8 content states per screen + 5 interaction states per element
 - [ ] Edge case catalog with 4 categories (data, timing, permission, connectivity)
 - [ ] Accessibility requirements (ARIA, keyboard, focus, contrast, screen reader)
 - [ ] Responsive behavior rules with touch targets

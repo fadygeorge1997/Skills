@@ -328,6 +328,20 @@ When products include AI features, test these additional dimensions:
 - **Problem:** Moderator biases results
 - **Solution:** Use neutral language, don't react, probe without suggesting
 
+### Accessibility as Afterthought
+- **Problem:** Running accessibility audit only after visual design is locked. Retrofitting accessibility is 3-5x more expensive than designing for it from the start.
+- **Solution:** Integrate WCAG checks from Phase 3 onward. Run automated scans during prototyping, not just validation.
+
+### Only Testing Desktop
+- **Problem:** Testing only on desktop when 80%+ of users are mobile (especially in emerging markets).
+- **Solution:** Test on the primary device of your target personas. For MENA markets, test on mid-range Android devices first.
+
+---
+
+## Quality Criteria
+
+Validation is rigorous when: (1) 5+ users per segment tested, (2) task completion rate measured for all core flows, (3) severity ratings assigned to every finding, (4) critical issues have proposed fixes with effort estimates, (5) accessibility audit covers all 4 POUR dimensions, (6) findings report includes quantitative metrics AND qualitative insights.
+
 ---
 
 ## Definition of Done

@@ -563,3 +563,12 @@ Modeled on Maslow's hierarchy — lower levels must be satisfied before pursuing
 ```
 
 **Application:** Never sacrifice accessibility for aesthetics. Never sacrifice privacy for personalization. Never sacrifice safety for speed-to-market. The hierarchy is non-negotiable.
+
+---
+
+### Cross-References
+- For Aesthetic-Usability effect on AI interfaces → `laws-of-ux.md`
+- For AI error testing methodologies → `usability-testing.md`
+- For trust metrics for AI features → `metrics-optimization.md`
+- For cultural bias in AI for Arabic markets → `arabic-rtl-mena.md`
+- For AI feature handoff specifications → `design-handoff.md`

@@ -15,9 +15,11 @@
 
 | Type | Definition | Example (for a fintech wallet) |
 |------|-----------|-------------------------------|
-| **Direct** | Same product, same market | Other Egyptian mobile wallets (Vodafone Cash, Orange Money, Fawry) |
+| **Direct** | Same product, same market | Other Egyptian mobile wallets (Vodafone Cash, Orange Money, Fawry*) |
 | **Indirect** | Different product, same job-to-be-done | Bank branch visits, cash payments, PayPal |
 | **Aspirational** | Best-in-class experience from any domain | Revolut (fintech UX), Apple Pay (simplicity), Grab (super-app) |
+
+*Note: Fawry is primarily a payment aggregator and bill payment platform, not a mobile wallet. Include it as an indirect competitor for bill payment flows, but compare it in the bill payment category rather than the P2P transfer category.
 
 Analyze all three types. Direct competitors show market expectations. Indirect competitors reveal the real job users are hiring for. Aspirational competitors show what "great" looks like regardless of domain.
 
@@ -349,3 +351,11 @@ Competitive analysis isn't a one-time exercise. Set up continuous monitoring:
 - User interviews: "What else have you tried? Why did you switch?"
 - Job postings: what competitors are hiring for reveals their roadmap
 - Patent filings: early signal of technical direction
+
+---
+
+### Cross-References
+- For heuristic evaluation during UX teardowns → `laws-of-ux.md` (Nielsen's 10)
+- For design token comparison in feature matrices → `ideation-prototyping.md`
+- For MENA-specific competitive context → `arabic-rtl-mena.md`
+- For ongoing competitive monitoring metrics → `metrics-optimization.md`

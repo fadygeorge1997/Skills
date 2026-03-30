@@ -298,3 +298,12 @@ The key insight of Design Thinking is that the process is non-linear. Testing of
 | Startup MVP | Lean UX | Speed to learning is the priority; minimize upfront investment |
 
 In practice, most teams blend all three. The frameworks are lenses, not cages. Use whichever lens gives the clearest view for the current challenge.
+
+---
+
+### Cross-References
+- For JTBD methodology details → `discovery-synthesis.md`
+- For cognitive load considerations when choosing frameworks → `laws-of-ux.md` (Hick's Law)
+- For MENA-specific discovery adaptations → `arabic-rtl-mena.md`
+- For metrics to validate framework effectiveness → `metrics-optimization.md`
+- For AI-assisted discovery synthesis → `agentic-ai-design.md`

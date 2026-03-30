@@ -64,6 +64,10 @@ This checklist defines the criteria for completing Phase 4 (Prototyping & Laws o
 - [ ] Ethical Design Hierarchy check passed
 - [ ] Accessibility self-audit completed (WCAG 2.1 AA)
 
+#### Verification
+- Evidence: completed Nielsen heuristic self-check table with notes for each heuristic documented below
+- Evidence: WCAG 2.1 AA self-audit results documented in the Accessibility Self-Audit section of this checklist
+
 ### Prototype
 
 - [ ] Interactive prototype created for key flows
@@ -174,7 +178,7 @@ This checklist defines the criteria for completing Phase 4 (Prototyping & Laws o
 
 | Criterion | Status |
 |-----------|--------|
-| Prototype realistic enough for meaningful feedback | ✓/✗ |
+| Prototype realistic enough for meaningful feedback — Evidence: prototype URL or file path documented | ✓/✗ |
 | Design system documented enough for engineering | ✓/✗ |
 | Laws of UX systematically applied | ✓/✗ |
 | Nielsen heuristic self-check passed | ✓/✗ |
@@ -222,6 +226,16 @@ This checklist defines the criteria for completing Phase 4 (Prototyping & Laws o
 | Inconsistent patterns | ✓/✗ | [Pattern library followed] |
 | Ignoring conventions | ✓/✗ | [Platform conventions used] |
 | Over-animation | ✓/✗ | [Animations purposeful, skippable] |
+
+---
+
+## Loop-Back Triggers from Later Phases
+
+Return to Phase 4 Prototype when:
+- Phase 5 severity-4 issues in prototype require redesign
+- Phase 6 handoff reveals 3+ undocumented states per component
+- Phase 5 accessibility audit fails WCAG AA on core flows
+- Phase 5 SUS score <68 (below average usability)
 
 ---
 

@@ -458,6 +458,20 @@ May      100%    50%     -       -       -       -
 - **Problem:** Optimizing for metrics at expense of user experience
 - **Solution:** Guardrail metrics + ethical design hierarchy
 
+### Testing Without Baseline
+- **Problem:** Running A/B tests without establishing baseline metrics first. Without a baseline, you can't measure real lift — only relative change within the test period.
+- **Solution:** Document baseline metrics for at least 2 weeks before launching any experiment. Include seasonality and day-of-week variance.
+
+### Premature Optimization
+- **Problem:** Optimizing micro-conversions when macro-level product-market fit is unproven.
+- **Solution:** If D7 retention is <20%, don't optimize button colors — go back to Phase 1 and validate you're solving the right problem.
+
+---
+
+## Quality Criteria
+
+Optimization is evidence-driven when: (1) every metric has a clear Goal-Signal-Metric chain, (2) experiments run for minimum 2 weeks with statistical significance calculated, (3) counter-metrics are tracked alongside primary metrics, (4) learnings are documented and fed back into the opportunity backlog, (5) Product Kata cycles produce weekly learnings.
+
 ---
 
 ## Definition of Done
@@ -513,7 +527,23 @@ Phase 7 is ongoing, but you're in a good rhythm when:
 
 ## Looping Back
 
-When you discover new user needs or metrics stall, return to:
-> `skills/ux-discover/SKILL.md` — Phase 1: Discovery & Research
+The product development cycle is continuous. Every optimization insight should feed back into earlier phases.
 
-The product development cycle is continuous. Every optimization insight should feed back into discovery.
+### Loop-Back Decision Guide
+
+| Condition | Target Phase | Scope |
+|-----------|-------------|-------|
+| D7 retention <20% | Phase 1 (Discovery) | Re-examine product-market fit |
+| 3+ A/B tests with no significant lift | Phase 2 (Define) | Reframe the hypothesis and problem |
+| New user segment discovered in analytics | Phase 1 (Discovery) | Targeted research for new segment |
+| Support tickets reveal new pain point cluster | Phase 2 (Define) | Update personas and journey maps |
+| Funnel drop-off at a specific flow step | Phase 3 (IA) or Phase 4 (Prototype) | Redesign the failing flow |
+| Accessibility complaints post-launch | Phase 5 (Validate) | Re-run accessibility audit |
+
+### Loop-Back Protocol
+1. Carry all optimization data as evidence into the target phase
+2. Narrow the scope to the specific area triggering the loop-back
+3. Update the Four-Risk Gate assessment
+4. Set clear exit criteria before re-advancing
+
+> Return to: `skills/ux-discover/SKILL.md` — Phase 1: Discovery & Research

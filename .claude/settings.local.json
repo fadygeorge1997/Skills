@@ -46,6 +46,10 @@
       "Bash(2)",
       "Bash(find ~/.claude/projects -name *.json -maxdepth 3)",
       "Read(//d/Skills/**)",
+      "Read(//c/Users/Fady/.claude/skills/**)",
+      "Read(//c/Users/Fady/.claude/plugins/**)",
+      "Bash(python3 D:/Skills/.claude/skills/ux-product-design-workflow/scripts:*)",
+      "Bash(python3 D:/Skills/ux-product-design-workflow/tools:*)",
       "Bash(xargs grep:*)",
       "Bash(xargs ls:*)",
       "Bash(find /c/Users/Fady -path *AppData* -name *.json)",
@@ -82,7 +86,24 @@
       "mcp__paper__write_html",
       "mcp__paper__get_screenshot",
       "mcp__paper__update_styles",
-      "mcp__paper__finish_working_on_nodes"
+      "mcp__paper__finish_working_on_nodes",
+      "Bash(python3:*)",
+      "Bash(ls:*)",
+      "Bash(find:*)",
+      "Read(//d/Skills/$HOME/.claude/**)",
+      "Read(//c/Users/Fady/.claude/**)",
+      "WebFetch(domain:www.mcpscout.ai)",
+      "Bash(npx -y accesslint-mcp@latest --help)",
+      "Bash(env)",
+      "Bash(for pkg:*)",
+      "Bash(do echo:*)",
+      "Bash(npm view:*)",
+      "Bash(done)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://mcp.figma.com/mcp)",
+      "Bash(npm search:*)",
+      "Bash(npx -y playwright-mcp@latest --help)",
+      "Bash(npx -y chrome-devtools-mcp@latest --help)",
+      "Bash(-print)"
     ]
   }
 }
